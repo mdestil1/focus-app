@@ -1,3 +1,18 @@
-"node_modules/" 
-"backend/bin/" 
-"backend/obj/" 
+# Ignore backend build artifacts
+backend/bin/
+backend/obj/
+
+# Ignore frontend dependencies
+frontend/node_modules/
+
+# Ignore build outputs
+frontend/build/
+frontend/dist/
+
+# Ignore logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
