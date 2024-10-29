@@ -1,0 +1,146 @@
+from requests import post, get
+from flask import Flask, redirect, request, jsonify, session
+from datetime import datetime, timedelta
+import json
+import time
+import urllib.parse
+
+#Setting up variables for usage in Spotify API
+client_id = "cdb580efbb5443409ee5e9b6cdff5cf8"
+client_secret = "366e01d9596d44a4b0ce33dda7436f10"
+
+REDIRECT_URI = 'http://localhost:5000/callback'
+AUTH_URL = 'https://accounts.spotify.com/authorize'
+API_BASE_URL = 'https://api.spotify.com/v1/'
+TOKEN_URL = "https://accounts.spotify.com/api/token"
+
+#Create a flask session --> store variables/data for later access in between requests
+app = Flask(__name__)
+app.secret_key = '53d355f8-571a-4590-a310-1f9579440851'     #arbitrary "password"
+
+#Welcome message for first time users
+@app.route('/')
+def index():
+    return "Welcome to my Spotify App <a href='/login'>Login with Spotify</a>"
+
+#Login endpoint --> Redirect to Spotify's Login Page
+@app.route('/login')
+def login():
+    scope = 'user-read-private user-read-email user-read-currently-playing'     #scope parameters --> Allows web app to access data only within scope
+    params = {
+        'client_id': client_id,
+        'response_type': 'code',
+        'scope': scope,
+        'redirect_uri': REDIRECT_URI,
+    }
+
+    auth_url = f"{AUTH_URL}?{urllib.parse.urlencode(params)}"
+
+    return redirect(auth_url)
+
+@app.route('/callback')
+def callback():
+    #Check if there's an error in login in to Spotify account
+    if 'error' in request.args:
+        return jsonify({"error": request.args['error']})
+    
+    #Valid login to Spotify account 
+    if 'code' in request.args:
+        req_body = {
+            'code': request.args['code'],
+            'grant_type': 'authorization_code',
+            'redirect_uri': REDIRECT_URI,
+            'client_id': client_id,
+            'client_secret': client_secret
+        }
+
+        result = post(TOKEN_URL, data=req_body)
+        json_result = result.json()
+
+        #Retrieving data from json_result --> Put data into session for security purposes
+        session['access_token'] = json_result['access_token']
+        session['refresh_token'] = json_result['refresh_token']
+        session['expires_at'] = datetime.now().timestamp() + json_result['expires_in']      #Converting 'expires_in' seconds into date
+        
+        return redirect('/studysession')
+    
+@app.route('/refresh-token')
+def refresh_token():
+    #Check if there is a refresh_token in session
+    if 'refresh_token' not in session:
+        return redirect('/login')
+    
+    #Check if access_token has expired
+    if datetime.now().timestamp() > session['expires_at']:
+        req_body = {
+            'grant_type': 'refresh_token',
+            'refresh_token': session['refresh_token'],
+            'client_id': client_id,
+            'client_secret': client_secret
+        }
+
+        result = post(TOKEN_URL, data=req_body)
+        new_token_info = result.json()
+
+        #Change old access_token/expires_at for new access_token/expires_at
+        session['access_token'] = new_token_info['access_token']
+        session['expires_at'] = datetime.now().timestamp() + new_token_info['expires_in']
+
+        return redirect('/studysession')
+    
+#Record data in a study session --> Input data into a database
+@app.route('/studysession')
+#starts a study session --> argument = duration of study session in minutes
+def studysession():
+    #Problem: Figure out how to let user input duration of study session
+    #Temporary Solution: Hardcode duration 
+    end_studysession = datetime.now().timestamp() + 1 * 60      #duration = 1 minute
+    studysessionList = []
+
+    while(datetime.now().timestamp() < end_studysession):
+        current_track_info = get_current_track()
+
+        #Problem: Find an easier way to install driver/extension for using SQL databases on VS code
+        #Temporary Solution: Store current_track_info into List studysessionList
+        if len(studysessionList) == 0:
+            studysessionList.append(current_track_info)
+        elif studysessionList[-1]['name'] != current_track_info['name']:
+            studysessionList.append(current_track_info)
+
+        #Retrieve current track every 5 seconds
+        time.sleep(5)
+        
+    return studysessionList
+        
+
+#Helper function for retreiving current_track
+def get_current_track():
+    url = "https://api.spotify.com/v1/me/player/currently-playing"
+    headers = {
+        'Authorization': f"Bearer {session['access_token']}"
+    }
+
+    result = get(url, headers=headers)
+    json_result = result.json()     #Problem: JSONDecodeError when no song is playing --> Need to figure out how to solve this problem
+
+    #Check if there is an active track playing
+    #Extracting certain data from json dictionary
+    track_id = json_result['item']['id']
+    track_name = json_result['item']['name']
+    artists = json_result['item']['artists']                            #array of Artist Objects
+    artists_names = ', '.join([artist['name'] for artist in artists])    #separating artist names with a comma
+    link = json_result['item']['external_urls']['spotify']
+
+    #Using dictionary to store current track's data
+    current_track_info = {
+        "id": track_id,
+        "name": track_name,
+        "artist": artists_names,
+        "link": link
+    }
+
+    return current_track_info
+
+#Running website app
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', debug=True)
