@@ -1,13 +1,13 @@
 Running Instructions:
 
-CD frontend,
+CD frontend
 
-npm install,
+npm install
 
-npm start,
+npm start
 
-New Terminal:
+New Terminal
 
-CD Backend,
+CD Backend
 
-dotnet run,
+dotnet run
