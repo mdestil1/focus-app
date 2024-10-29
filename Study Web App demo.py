@@ -4,10 +4,15 @@ from datetime import datetime, timedelta
 import json
 import time
 import urllib.parse
+import pandas as pd
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 #Setting up variables for usage in Spotify API
-client_id = "cdb580efbb5443409ee5e9b6cdff5cf8"
-client_secret = "366e01d9596d44a4b0ce33dda7436f10"
+client_id = os.getenv("CLIENT_ID")
+client_secret = os.getenv("CLIENT_SECRET")
 
 REDIRECT_URI = 'http://localhost:5000/callback'
 AUTH_URL = 'https://accounts.spotify.com/authorize'
@@ -32,6 +37,7 @@ def login():
         'response_type': 'code',
         'scope': scope,
         'redirect_uri': REDIRECT_URI,
+        'show_dialog': True     #should remove this line later: forces the user to login in everytime b/c easier to test/debug
     }
 
     auth_url = f"{AUTH_URL}?{urllib.parse.urlencode(params)}"
@@ -101,7 +107,8 @@ def studysession():
         current_track_info = get_current_track()
 
         #Problem: Find an easier way to install driver/extension for using SQL databases on VS code
-        #Temporary Solution: Store current_track_info into List studysessionList
+        #(Temporary) Solution: Export file as .csv file and convert into SQL database in Microsoft VS .Net
+        #Solution: Convert code into Microsoft VS .Net 
         if len(studysessionList) == 0:
             studysessionList.append(current_track_info)
         elif studysessionList[-1]['name'] != current_track_info['name']:
@@ -109,7 +116,11 @@ def studysession():
 
         #Retrieve current track every 5 seconds
         time.sleep(5)
-        
+    
+    #Saving studysessionList as .csv file for Microsoft VS's SQL Database
+    df = pd.DataFrame(studysessionList)
+    df.to_csv('studysesion1.csv', index=False)
+
     return studysessionList
         
 
