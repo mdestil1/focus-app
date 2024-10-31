@@ -1,4 +1,5 @@
 # Study Web App Demo
+The Goal: A focus/study app that tracks your productivity and the music associated with your different levels of productivity. The app will show you your productivity over time, in addition to showing you how productive you are while listening to different genres of music, tracking your progress and rewarding you as you become more and more productive. The reward system will be something similar to a gatcha game, where the goal is to collect all of the characters, but ours will be related to music. Whatever music genre you listen to while studying will be what theme the character/reward you recieve will be based on, however if it's not the music genre that you're most productive during the reward won't be as good. For example, if you're most productive when listening to classical music however you choose to listen to pop music the reward for studying will more often be something smaller or of less value. However if you listen to classical music while studying the chance of recieving a bigger reward is higher. 
 
 ## Frontend:
 
