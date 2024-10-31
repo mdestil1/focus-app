@@ -53,6 +53,6 @@ This is C# code that allows you to connect to Pixela's API and create a user (wi
 
 When testing, you need to make a username that isn't already taken, and if that isn't done first the others will report a failure to complete the task. Also the token you chose needs to be at least 8 characters long. 
   
-To run the program uncomment the line of code in Main that you're testing and click the Start button at the top. 
+*To run the program:* Download the PixelaScript folder and open it in Microsoft Visual Studio. Once open, uncomment the line of code in Main that you're testing and click the Start button at the top. 
 
 *Reference Materials:* https://stackoverflow.com/questions/75516705/pixela-api-fails-with-username-doesnt-exist-or-token-is-wrong (to figure out how to format the HTTP endpoint to connect to the Pixela API), Microsoft C# Reference Docs
