@@ -30,6 +30,7 @@ dotnet run
 This Python code allows users to interact with Spotify API through Spotify account login and granting permission to access users' private data. After successful login, the Spotify server will give the program {access_token, refresh_token, and expires_in}, which allows the program to access users' data for a specific amount of time. The program will compile the user's current playing tracks into a Python dictionary and create a .scv file. In the future, it would ideally be in C# and use a SQL database.
 
 Instructions on running Study Web App Demo:
+
   0. Reference Material: https://www.youtube.com/watch?v=olY_2MW4Eik&list=PL1TBkFFBtagorhLzvm5dCA1cOqJKxnWNz&index=2
   1. Install the libraries
   2. Run the program. Select "http://127.0.0.1:5000".
