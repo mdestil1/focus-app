@@ -1,0 +1,134 @@
+.nav {
+    width: 280px;
+    height: 100vh;
+    background: #818fb5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    background-color: #1B4B89;
+}
+
+.otherside {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    padding: 20px 30px;
+}
+
+.digit {
+    font-size: 20px;
+    color: #fff;
+}
+
+.txt {
+    font-size: 10px;
+    color: #fffcd6;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 50%;
+    color: white;
+}
+
+
+a {
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: grid;
+    background-color: #152D67;
+}
+
+h1 {
+    font-size: 3.5em;
+    line-height: 1.1;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1.1;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    padding: 20px;
+    color: white;
+    background: #1B4B89;
+    border-radius: 10px;
+    text-align: center;
+}
+img {
+    margin: auto;
+    border: 3px solid white;
+    padding: 20px;
+    align-content: center;
+}
+
+.circleButtons {
+    margin: auto;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background: #2267AB;
+    margin-bottom: 20px;
+}
+
+.badges {
+    margin: auto;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background: #297ACC;
+    margin-bottom: 10px;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 5px;
+    width: 200px;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background: #2970CC;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin-bottom: 30px;
+    color: white;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+

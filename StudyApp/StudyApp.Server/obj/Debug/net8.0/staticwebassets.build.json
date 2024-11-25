@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "8ohMs5Elmg9QvKd1vo246r4CIjxrMeAa6twwkosjDEI=",
+  "Source": "StudyApp.Server",
+  "BasePath": "_content/StudyApp.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\studyapp.client.esproj",
+      "Version": 2,
+      "Source": "studyapp.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

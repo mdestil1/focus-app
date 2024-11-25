@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Session</title>
+    <link rel="stylesheet" href="/src/index.css" type="text/css" />
+</head>
+<body>
+    <h1>STUDISSIMO</h1>
+    <div class="nav">
+        <ul>
+            <li><button type="button"><a href="dashboard.html"><p>Dashboard</p></a></button></li>
+            <li><button type="button"><a href="studySession.html"><p>Study Session</p></a></button></li>
+            <li><button type="button"><a href="musicAnalytics.html"><p>Music Analytics</p></a></button></li>
+            <li><button type="button"><a href="pastMusicSessions.html"><p>Music History</p></a></button></li>
+            <li><button type="button"><a href="recommendations.html"><p>Recommendations</p></a></button></li>
+            <li><button type="button"><a href="yourStudent.html"><p>Your Student</p></a></button></li>
+            <li><button type="button"><a href="rewards.html"><p>Rewards</p></a></button></li>
+        </ul>
+    </div>
+    <p style="color:white; padding: 20px; margin:auto;">Past Study Sessions</p>
+    <div class="center">
+        <form id="pastStudySessionForm" action="pastStudySessionResult" method="post">
+            <label for="studySessionDate">Date:</label><br>
+            <input type="text" id="studySessionDate" name="studySessionDate"><br><br>
+            <input type="submit" /><br>
+        </form>
+    </div>
+    <div class="otherside">
+        <button type="button" class="circleButtons" id="download"><p>DOWNLOAD GRAPH</p></button>
+        <button type="button" class="circleButtons" id="openInPixela"><p>OPEN IN PIXELA</p></button>
+    </div>
+</body>
+</html>
