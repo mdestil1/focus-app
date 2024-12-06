@@ -9,6 +9,13 @@ using SpotifyAPI.Web.Auth;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http.HttpResults;
+
+/*
+using CsvHelper;
+using CsvHelper.Configuration;
+using System.Globalization;
+*/
 
 namespace SpotifyTestApp.Controllers
 {
@@ -33,7 +40,7 @@ namespace SpotifyTestApp.Controllers
             return Content($"Welcome to my Spotify App. " +
                   $"<a href='{Url.Action("Login", "Spotify")}'>Login with Spotify</a> " +
                   $"<a href='{Url.Action("StartStudySession", "Spotify")}'>Start Study Session</a> " +
-                  $"<a href='{Url.Action("GetRecommendations", "Spotify")}'>Get Recommendations</a>", "text/html");
+                  $"<a href='{Url.Action("CreatePlaylist", "Spotify")}'>Create Study Task Playlist</a>", "text/html");
         }
 
         [HttpGet("login")]
@@ -50,7 +57,7 @@ namespace SpotifyTestApp.Controllers
             {
                 CodeChallengeMethod = "S256",
                 CodeChallenge = challenge,
-                Scope = new[] { Scopes.UserReadCurrentlyPlaying, Scopes.UserReadEmail, Scopes.UserReadPrivate }
+                Scope = new[] { Scopes.UserReadCurrentlyPlaying, Scopes.UserReadEmail, Scopes.UserReadPrivate , Scopes.PlaylistModifyPrivate, Scopes.PlaylistModifyPublic}
                 //Not fit for SpotifyAPI.NET: Scope = new[] { "user-read-private", "user-read-email", "user-read-currently-playing" }
             };
 
@@ -125,7 +132,8 @@ namespace SpotifyTestApp.Controllers
             }
 
             // Process tracks and update study session stats
-            ProcessTracks(studyTracks);
+            //ProcessTracks(studyTracks);
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -186,7 +194,8 @@ namespace SpotifyTestApp.Controllers
             }
         }
 
-        // Helper Method: Process Tracks (Simulated)
+        /*
+        // Helper Method: Process Tracks (Simulated) --> Using csv files
         private void ProcessTracks(List<FullTrack> tracks)
         {
             if(tracks == null || tracks.Count == 0)
@@ -200,10 +209,35 @@ namespace SpotifyTestApp.Controllers
             sessionId++;
             HttpContext.Session.SetInt32("TotalStudySessions", sessionId);
 
-            //Continue here --> Figure out how to save in db
+            //Continue here/Modification --> Figure out how to save in db
+            var csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), $"studysession{sessionId}.csv");
+
+            // Save track details to a CSV file
+            SaveTracksToCsv(tracks, csvFilePath);
+
+            // Update session-level averages
+            UpdateSessionMetrics(csvFilePath);
+
+            Console.WriteLine($"Study session {sessionId} processed and saved to {csvFilePath}");
         }
+        */
 
         /*
+        //Helper Method: Save the list of tracks to a CSV file
+        private void SaveTracksToCsv(List<FullTrack> tracks, string filePath)
+        {
+            using (var writer = new StreamWriter(filePath))
+            using (var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)))
+            {
+                csv.WriteRecords(tracks.Select(t => new
+                {
+                    Name = t.Name,
+                    Artists = string.Join(", ", t.Artists.Select(a => a.Name)),
+                    DurationMs = t.DurationMs,
+                    Album = t.Album.Name
+                }));
+            }
+        }
         //Helper Method: Update study music data
         private void UpdateSessionMetrics(string csvFilePath)
         {
@@ -253,19 +287,71 @@ namespace SpotifyTestApp.Controllers
 
             HttpContext.Session.SetInt32("TotalSongs", totalSongs);
         }
+
+        //Adding Extension Methods to HttpContext.Session to support double
+        public static class SessionExtensions
+        {
+            public static void SetDouble(this ISession session, string key, double value)
+            {
+                session.SetString(key, value.ToString(CultureInfo.InvariantCulture));
+            }
+
+            public static double GetDouble(this ISession session, string key)
+            {
+                var value = session.GetString(key);
+                return value != null ? double.Parse(value, CultureInfo.InvariantCulture) : 0.0;
+            }
+        }
         */
 
-        // Endpoint: Get Recommendations
-        [HttpGet("get-recommendations")]
-        public IActionResult GetRecommendations()
+        // Endpoint: Create StudyTask-specific playlist in Spotify
+        [HttpGet("create-studyplaylist")]
+        public async Task<IActionResult> CreatePlaylist(string studyTaskName)
         {
-            return Content("<a href='/api/spotify/generate-recommendations'>Generate Recommendations</a>", "text/html");
+            try
+            {
+                // Ensure the SpotifyClient is initialized with a valid access token
+                var accessToken = HttpContext.Session.GetString("AccessToken");
+                if (string.IsNullOrEmpty(accessToken))
+                {
+                    Console.WriteLine("Access token is missing or invalid");
+                    return RedirectToAction(nameof(Index));
+                }
+
+                var spotify = new SpotifyClient(accessToken);
+
+                var userProfile = await spotify.UserProfile.Current();
+                var userId = userProfile.Id;
+
+
+                // Prepare the playlist creation request
+                var playlistRequest = new PlaylistCreateRequest(studyTaskName)
+                {
+                    Description = $"Playlist created for study task: {studyTaskName}",
+                    Public = false // Change to true if you want a public playlist
+                };
+
+                // Create the playlist
+                var newPlaylist = await spotify.Playlists.Create(userId, playlistRequest);
+
+                Console.WriteLine($"Playlist '{studyTaskName}' created successfully with ID: {newPlaylist.Id}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error creating playlist: {ex.Message}");
+            }
+
+            //Continue here: Add Recommended Songs into new playlist
+
+            return RedirectToAction(nameof(Index));
         }
-        /*
+
+        /* Modification: Change to helper method
         // Endpoint: Generate Recommendations
         [HttpGet("generate-recommendations")]
         public async Task<IActionResult> GenerateRecommendations()
         {
+            //Update depend on user's inputs
             var seedGenres = new[] { "anime", "groove", "guitar" };
             var accessToken = HttpContext.Session.GetString("AccessToken");
 
@@ -281,6 +367,5 @@ namespace SpotifyTestApp.Controllers
             return Ok(recommendations?.Tracks);
         }
         */
-       
     }
 }
