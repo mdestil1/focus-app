@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using SpotifyTestApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,16 +16,20 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // Ensure session cookie is essential for GDPR compliance
 });
 
+// Register the DbContext with the connection string
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 var app = builder.Build();
 
-/* Addition 2: Recommended addition by ChatGPT
+
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error"); // Custom error page for production
     app.UseHsts(); // Add HTTP Strict Transport Security for secure connections
 }
-*/
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

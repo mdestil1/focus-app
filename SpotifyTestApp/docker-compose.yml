@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver2022
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "SpotifyTestAppCS392@BU" # Replace with your strong password
+    ports:
+      - "1433:1433" # Expose SQL Server on port 1433
+    volumes:
+      - sql_data:/var/opt/mssql # Persistent data storage
+
+volumes:
+  sql_data:

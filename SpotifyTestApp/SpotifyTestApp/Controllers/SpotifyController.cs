@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
+using SpotifyTestApp.Data;
+using Newtonsoft.Json;
 
 /*
 using CsvHelper;
@@ -24,11 +27,13 @@ namespace SpotifyTestApp.Controllers
     {
         private readonly IConfiguration _config;
         private readonly string _redirectUri;
+        private readonly AppDbContext _context;
 
-        public SpotifyController(IConfiguration config)
+        public SpotifyController(IConfiguration config, AppDbContext context)
         {
             _config = config;
             _redirectUri = _config["Spotify:RedirectUri"];
+            _context = context;
         }
 
         private SpotifyClient _spotify;
@@ -131,6 +136,28 @@ namespace SpotifyTestApp.Controllers
                 await Task.Delay(TimeSpan.FromSeconds(5)); // 5 seconds delay + Safeguards against thread-blocking
             }
 
+            // Calculate audio features, genre, and productivity score
+            var averageAudioFeatures = await CalculateAverageAudioFeatures(studyTracks);
+            var genre = await DetermineMostPlayedGenre(studyTracks);
+            var productivity = GetProductivityScore();
+
+            // Serialize the audio features dictionary to a JSON string
+            var audioFeaturesJson = JsonConvert.SerializeObject(averageAudioFeatures);
+
+            // Save session to the database
+            var studySession = new StudySession
+            {
+                UserId = HttpContext.Session.GetString("UserId"), // Retrieve user ID from session
+                StudyDate = DateTime.Now,
+                SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
+                MusicHistory = studyTracks.Select(t => t.Name).ToList(),
+                Productivity = productivity,
+                Genre = genre
+            };
+
+            _context.StudySessions.Add(studySession);
+            await _context.SaveChangesAsync();
+
             // Process tracks and update study session stats
             //ProcessTracks(studyTracks);
 
@@ -193,6 +220,113 @@ namespace SpotifyTestApp.Controllers
                 return null;
             }
         }
+
+        // Helper Methods
+        private async Task<Dictionary<string, double>> CalculateAverageAudioFeatures(List<FullTrack> tracks)
+        {
+            var audioFeatures = new Dictionary<string, double>
+            {
+                { "Tempo", 0 },
+                { "Instrumentalness", 0 },
+                { "Energy", 0 },
+                { "Acousticness", 0 },
+                { "Danceability", 0 },
+                { "Loudness", 0 },
+                { "Speechiness", 0 },
+                { "Valence", 0 }
+            };
+
+            foreach (var track in tracks)
+            {
+                try
+                {
+                    var features = await _spotify.Tracks.GetAudioFeatures(track.Id);
+                    audioFeatures["Tempo"] += features.Tempo;
+                    audioFeatures["Instrumentalness"] += features.Instrumentalness;
+                    audioFeatures["Energy"] += features.Energy;
+                    audioFeatures["Acousticness"] += features.Acousticness;
+                    audioFeatures["Danceability"] += features.Danceability;
+                    audioFeatures["Loudness"] += features.Loudness;
+                    audioFeatures["Speechiness"] += features.Speechiness;
+                    audioFeatures["Valence"] += features.Valence;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error fetching audio features for track {track.Name}: {ex.Message}");
+                    continue; // Skip this track if there was an error
+                }
+            }
+
+            // Calculate averages
+            if (tracks.Count > 0)
+            {
+                audioFeatures["Tempo"] /= tracks.Count;
+                audioFeatures["Energy"] /= tracks.Count;
+                audioFeatures["Acousticness"] /= tracks.Count;
+                audioFeatures["Instrumentalness"] /= tracks.Count;
+                audioFeatures["Danceability"] /= tracks.Count;
+                audioFeatures["Loudness"] /= tracks.Count;
+                audioFeatures["Speechiness"] /= tracks.Count;
+                audioFeatures["Valence"] /= tracks.Count;
+            }
+
+            return audioFeatures;
+        }
+        public async Task<string> DetermineMostPlayedGenre(List<FullTrack> tracks)
+        {
+            var genreCounts = new Dictionary<string, int>();
+
+            // Iterate through each track and gather the genres of the artists
+            foreach (var track in tracks)
+            {
+                try
+                {
+                    // Iterate through each artist for the track and get their genres
+                    foreach (var artist in track.Artists)
+                    {
+                        // Fetch the artist's information (including genres)
+                        var artistDetails = await _spotify.Artists.Get(artist.Id);
+
+                        // Add each genre to the dictionary with a count
+                        foreach (var genre in artistDetails.Genres)
+                        {
+                            if (genreCounts.ContainsKey(genre))
+                            {
+                                genreCounts[genre]++;
+                            }
+                            else
+                            {
+                                genreCounts.Add(genre, 1);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error retrieving genres for track {track.Name}: {ex.Message}");
+                    continue;
+                }
+            }
+
+            // If no genres were found, return null or a default genre
+            if (genreCounts.Count == 0)
+            {
+                return "No genres found";
+            }
+
+            // Find the genre with the highest count
+            var mostPlayedGenre = genreCounts.OrderByDescending(g => g.Value).FirstOrDefault();
+
+            return mostPlayedGenre.Key; // Return the genre with the highest play count
+        }
+
+        //Modify: Change it to get from survey
+        private int GetProductivityScore()
+        {
+            // Example: Calculate productivity score based on some metrics (e.g., time spent studying, focus, etc.)
+            return new Random().Next(1, 11); // Random for demonstration; replace with actual logic
+        }
+
 
         /*
         // Helper Method: Process Tracks (Simulated) --> Using csv files
