@@ -1,0 +1,13 @@
+services:
+  sqlserver:
+    image: custom-sqlserver:latest
+    container_name: sqlserver2022
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrongPassword123!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+volumes:
+  sql_data:
