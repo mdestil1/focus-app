@@ -1,26 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-  Container,
-  TextField,
-  Button,
-  Typography,
-  FormControlLabel,
-  Checkbox,
-  Box,
-  Paper,
-} from '@mui/material';
+import { Container, TextField, Button, Typography, Paper, Box } from '@mui/material';
 
-const Signup = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
 
-  const handleSignup = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5123/api/signup', {
+      const response = await fetch('http://localhost:5123/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
@@ -29,13 +19,13 @@ const Signup = () => {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem('userId', data.userId);
-        navigate('/checkout');
+        navigate('/dashboard');
       } else {
-        alert(data.message || 'Error signing up');
+        alert(data.message || 'Invalid username or password');
       }
     } catch (error) {
-      console.error('Signup error:', error);
-      alert('Error signing up. Please try again.');
+      console.error('Login error:', error);
+      alert('Error logging in. Please try again.');
     }
   };
 
@@ -43,9 +33,9 @@ const Signup = () => {
     <Container maxWidth="sm" sx={{ mt: 8 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography variant="h4" gutterBottom align="center">
-          Sign Up
+          Login
         </Typography>
-        <form onSubmit={handleSignup}>
+        <form onSubmit={handleLogin}>
           <TextField
             label="Username"
             variant="outlined"
@@ -65,19 +55,9 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
             sx={{ mb: 2 }}
           />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={rememberMe}
-                onChange={() => setRememberMe(!rememberMe)}
-                color="primary"
-              />
-            }
-            label="Remember Me"
-          />
           <Box sx={{ mt: 3 }}>
             <Button type="submit" variant="contained" color="primary" fullWidth>
-              Continue to Checkout
+              Log In
             </Button>
           </Box>
         </form>
@@ -86,4 +66,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Login;

@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   Container,
   Grid,
   Paper,
   Box,
+  Typography,
 } from '@mui/material';
+import logo from './logo.png'; // Import the logo
 
 const Home = () => {
   const navigate = useNavigate();
@@ -19,14 +20,32 @@ const Home = () => {
       {/* Navigation Bar */}
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            StudyFocusApp
-          </Typography>
-          <Button color="inherit" onClick={() => navigate('/signup')}>
+          {/* Logo as clickable image */}
+          <img
+            src={logo} // Use the imported logo
+            alt="Logo"
+            style={{
+              height: '40px', // Adjust height as needed
+              width: '40px',
+              cursor: 'pointer',
+              background: 'transparent',
+              marginRight: '16px', // Add spacing between logo and buttons
+            }}
+            onClick={() => navigate('/')} // Navigate to the homepage
+          />
+
+          <Box sx={{ flexGrow: 1 }} />
+          <Button
+            color="inherit"
+            onClick={() => navigate('/signup')}
+          >
             Sign Up
           </Button>
-          <Button color="inherit" onClick={() => navigate('/dashboard')}>
-            Dashboard
+          <Button
+            color="inherit"
+            onClick={() => navigate('/login')} // Navigate to the sign-in page
+          >
+            Sign In
           </Button>
         </Toolbar>
       </AppBar>
@@ -55,20 +74,18 @@ const Home = () => {
               onClick={() => navigate('/signup')}
               sx={{ mr: 2 }}
             >
-              Get Started
+              Sign Up
             </Button>
             <Button
               variant="contained"
               color="primary"
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/login')} // Navigate to the sign-in page
             >
-              Dashboard
+              Sign In
             </Button>
           </Box>
         </Container>
       </Box>
-
-      
 
       {/* Features Section */}
       <Container sx={{ py: 8 }} maxWidth="md">
