@@ -123,6 +123,7 @@ namespace SpotifyTestApp.Controllers
         [HttpGet("studysession")]
         public async Task<IActionResult> StartStudySession()
         {
+            var sessionStartTime = DateTime.Now;
             var endStudySession = DateTime.Now.AddMinutes(1); // 1-minute session
             var studyTracks = new List<FullTrack>();
 
@@ -148,7 +149,7 @@ namespace SpotifyTestApp.Controllers
             var studySession = new StudySession
             {
                 UserId = HttpContext.Session.GetString("UserId"), // Retrieve user ID from session
-                StudyDate = DateTime.Now,
+                StudyDate = sessionStartTime,
                 SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
                 MusicHistory = studyTracks.Select(t => t.Name).ToList(),
                 Productivity = productivity,
@@ -440,7 +441,7 @@ namespace SpotifyTestApp.Controllers
 
         // Endpoint: Create StudyTask-specific playlist in Spotify
         [HttpGet("create-studyplaylist")]
-        public async Task<IActionResult> CreatePlaylist(string studyTaskName)
+        public async Task<IActionResult> CreatePlaylist(string studyTaskName, string[] genres)
         {
             try
             {
@@ -454,9 +455,57 @@ namespace SpotifyTestApp.Controllers
 
                 var spotify = new SpotifyClient(accessToken);
 
+                // Step 1: Fetch cumulative SongAudioFeatures and compute average values
+                var allSessions = await _context.StudySessions.ToListAsync();
+                var cumulativeAudioFeatures = new Dictionary<string, double>();
+                int sessionCount = 0;
+
+                var audioFeaturesTarget = new Dictionary<string, string>();
+
+                foreach (var session in allSessions)
+                {
+                    var audioFeatures = JsonConvert.DeserializeObject<Dictionary<string, double>>(session.SongAudioFeaturesJson);
+                    if (audioFeatures == null) continue;
+
+                    foreach (var feature in audioFeatures)
+                    {
+                        if (cumulativeAudioFeatures.ContainsKey(feature.Key))
+                            cumulativeAudioFeatures[feature.Key] += feature.Value;
+                        else
+                            cumulativeAudioFeatures[feature.Key] = feature.Value;
+                    }
+                    sessionCount++;
+                }
+
+                // Calculate average audio features
+                foreach (var key in cumulativeAudioFeatures.Keys.ToList())
+                {
+                    cumulativeAudioFeatures[key] /= sessionCount;
+                    audioFeaturesTarget[key] = cumulativeAudioFeatures[key].ToString();
+                }
+
+                // Step 2: Generate recommendations based on audio features and genres
+                var recommendationsRequest = new RecommendationsRequest
+                {
+                    //Modify: Use more SongAudioFeatures
+                    //SeedGenres = genres.ToList(), // Convert array to List<string>
+                    //TargetDanceability = (float?)cumulativeAudioFeatures.GetValueOrDefault("Danceability"),
+                    //TargetEnergy = (float?)cumulativeAudioFeatures.GetValueOrDefault("Energy"),
+                    //TargetTempo = (float?)cumulativeAudioFeatures.GetValueOrDefault("Tempo")
+                };
+
+                //Continue here: Fix the error ("SeedGenres.Add" works?)
+                foreach (var genre in genres)
+                {
+                    recommendationsRequest.SeedGenres.Add(genre);
+                }
+
+                recommendationsRequest.AddCustomQueryParams(audioFeaturesTarget);
+
+                var recommendations = await spotify.Browse.GetRecommendations(recommendationsRequest);
+                
                 var userProfile = await spotify.UserProfile.Current();
                 var userId = userProfile.Id;
-
 
                 // Prepare the playlist creation request
                 var playlistRequest = new PlaylistCreateRequest(studyTaskName)
@@ -469,20 +518,29 @@ namespace SpotifyTestApp.Controllers
                 var newPlaylist = await spotify.Playlists.Create(userId, playlistRequest);
 
                 Console.WriteLine($"Playlist '{studyTaskName}' created successfully with ID: {newPlaylist.Id}");
+
+                // Step 4: Add recommended tracks to the playlist
+                var trackUris = recommendations.Tracks.Select(t => t.Uri).ToList();
+                if (trackUris.Count > 0)
+                {
+                    await spotify.Playlists.AddItems(newPlaylist.Id, new PlaylistAddItemsRequest(trackUris));
+                    Console.WriteLine("Tracks added to the playlist successfully.");
+                }
+                else
+                {
+                    Console.WriteLine("No tracks were recommended based on the provided features.");
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error creating playlist: {ex.Message}");
             }
 
-            //Continue here: Add Recommended Songs into new playlist
-
             return RedirectToAction(nameof(Index));
         }
 
-        /* Modification: Change to helper method
-        // Endpoint: Generate Recommendations
-        [HttpGet("generate-recommendations")]
+        /*
+        // Helper Method: Generate Recommendations from music data
         public async Task<IActionResult> GenerateRecommendations()
         {
             //Update depend on user's inputs
@@ -501,5 +559,6 @@ namespace SpotifyTestApp.Controllers
             return Ok(recommendations?.Tracks);
         }
         */
+        
     }
 }
