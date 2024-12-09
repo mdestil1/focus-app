@@ -3,56 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\sydne\\source\\repos\\StudyApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\pastmusicsessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\pastmusicsessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\controllers\\pixelacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\controllers\\pixelacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\musicanalytics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\musicanalytics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\paststudysessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\paststudysessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\recommendations.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\recommendations.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\yourstudent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\yourstudent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\studysession.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\studysession.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\rewards.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\rewards.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\stopwatch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\stopwatch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\pixelasignupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\pixelasignupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\pixelasignupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\pixelasignupmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\pixelasignup.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\pixelasignup.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\vite.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\eslint.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\aboutus.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\aboutus.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -63,16 +51,68 @@
       "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\studyapp.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\studyapp.server.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\changelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\changelog.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\studyapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\studyapp.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\studysession.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\studysession.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\settings.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\settings.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\pastmusicsessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\pastmusicsessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\paststudysessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\paststudysessions.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\musicanalytics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\musicanalytics.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\recommendations.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\recommendations.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\yourstudent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\yourstudent.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\rewards.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\rewards.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\stopwatch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\stopwatch.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\.vscode\\launch.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.client\\public\\graph.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
       "RelativeMoniker": "D:0:0:{C2E4FB70-7F05-4771-8944-B46D684CD272}|studyapp.client\\studyapp.client.esproj|solutionrelative:studyapp.client\\public\\graph.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|c:\\users\\sydne\\source\\repos\\studyapp\\studyapp.server\\studyapp.server.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{252CF2D6-7BC2-4821-990A-2AD35B71A267}|StudyApp.Server\\StudyApp.Server.csproj|solutionrelative:studyapp.server\\studyapp.server.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -97,8 +137,298 @@
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Program.cs",
+              "RelativeDocumentMoniker": "StudyApp.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Program.cs*",
+              "RelativeToolTip": "StudyApp.Server\\Program.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T17:18:21.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PixelaController.cs",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Controllers\\PixelaController.cs",
+              "RelativeDocumentMoniker": "StudyApp.Server\\Controllers\\PixelaController.cs",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Controllers\\PixelaController.cs*",
+              "RelativeToolTip": "StudyApp.Server\\Controllers\\PixelaController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T22:55:18.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PixelaSignUpModel.cs",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\PixelaSignUpModel.cs",
+              "RelativeDocumentMoniker": "StudyApp.Server\\PixelaSignUpModel.cs",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\PixelaSignUpModel.cs*",
+              "RelativeToolTip": "StudyApp.Server\\PixelaSignUpModel.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T20:36:35.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "pixelaSignUp.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pixelaSignUp.html",
+              "RelativeDocumentMoniker": "studyapp.client\\pixelaSignUp.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pixelaSignUp.html",
+              "RelativeToolTip": "studyapp.client\\pixelaSignUp.html",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-07T19:12:59.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PixelaSignUpService.cs",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\PixelaSignUpService.cs",
+              "RelativeDocumentMoniker": "StudyApp.Server\\PixelaSignUpService.cs",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\PixelaSignUpService.cs*",
+              "RelativeToolTip": "StudyApp.Server\\PixelaSignUpService.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T21:31:10.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "StudyApp.Server\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Properties\\launchSettings.json",
+              "RelativeToolTip": "StudyApp.Server\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-08T22:23:47.062Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "vite.config.js",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\vite.config.js",
+              "RelativeDocumentMoniker": "studyapp.client\\vite.config.js",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\vite.config.js",
+              "RelativeToolTip": "studyapp.client\\vite.config.js",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAACIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-19T06:23:17.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "eslint.config.js",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\eslint.config.js",
+              "RelativeDocumentMoniker": "studyapp.client\\eslint.config.js",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\eslint.config.js",
+              "RelativeToolTip": "studyapp.client\\eslint.config.js",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-09T06:49:59.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\appsettings.json",
+              "RelativeDocumentMoniker": "StudyApp.Server\\appsettings.json",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\appsettings.json",
+              "RelativeToolTip": "StudyApp.Server\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-09T01:41:03.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "aboutUs.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\aboutUs.html",
+              "RelativeDocumentMoniker": "studyapp.client\\aboutUs.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\aboutUs.html",
+              "RelativeToolTip": "studyapp.client\\aboutUs.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-03T19:42:19.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "studyapp.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\App.jsx",
+              "RelativeToolTip": "studyapp.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-19T18:56:09.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\main.jsx",
+              "RelativeDocumentMoniker": "studyapp.client\\src\\main.jsx",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\main.jsx",
+              "RelativeToolTip": "studyapp.client\\src\\main.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-11-19T07:19:50.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StudyApp.Server.http",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.http",
+              "RelativeDocumentMoniker": "StudyApp.Server\\StudyApp.Server.http",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.http",
+              "RelativeToolTip": "StudyApp.Server\\StudyApp.Server.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-03T21:20:56.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CHANGELOG.md",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\CHANGELOG.md",
+              "RelativeDocumentMoniker": "StudyApp.Server\\CHANGELOG.md",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\CHANGELOG.md",
+              "RelativeToolTip": "StudyApp.Server\\CHANGELOG.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-12-09T01:41:48.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StudyApp.Server.csproj",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.csproj",
+              "RelativeDocumentMoniker": "StudyApp.Server\\StudyApp.Server.csproj",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.csproj",
+              "RelativeToolTip": "StudyApp.Server\\StudyApp.Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-07T20:30:11.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\index.html",
+              "RelativeDocumentMoniker": "studyapp.client\\index.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\index.html",
+              "RelativeToolTip": "studyapp.client\\index.html",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAACVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-19T06:46:30.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "settings.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\settings.html",
+              "RelativeDocumentMoniker": "studyapp.client\\settings.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\settings.html",
+              "RelativeToolTip": "studyapp.client\\settings.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-03T19:40:08.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "studySession.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\studySession.html",
+              "RelativeDocumentMoniker": "studyapp.client\\studySession.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\studySession.html",
+              "RelativeToolTip": "studyapp.client\\studySession.html",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-19T16:59:14.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "pastMusicSessions.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastMusicSessions.html",
+              "RelativeDocumentMoniker": "studyapp.client\\pastMusicSessions.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastMusicSessions.html",
+              "RelativeToolTip": "studyapp.client\\pastMusicSessions.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-19T17:10:21.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "recommendations.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\recommendations.html",
+              "RelativeDocumentMoniker": "studyapp.client\\recommendations.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\recommendations.html",
+              "RelativeToolTip": "studyapp.client\\recommendations.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-19T20:19:09.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\index.css",
+              "RelativeDocumentMoniker": "studyapp.client\\src\\index.css",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\index.css",
+              "RelativeToolTip": "studyapp.client\\src\\index.css",
+              "ViewState": "AgIAAH4AAAAAAAAAAIBJwJMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-19T06:48:33.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "pastStudySessions.html",
+              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastStudySessions.html",
+              "RelativeDocumentMoniker": "studyapp.client\\pastStudySessions.html",
+              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastStudySessions.html",
+              "RelativeToolTip": "studyapp.client\\pastStudySessions.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-11-19T17:10:17.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "yourStudent.html",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\yourStudent.html",
               "RelativeDocumentMoniker": "studyapp.client\\yourStudent.html",
@@ -106,108 +436,38 @@
               "RelativeToolTip": "studyapp.client\\yourStudent.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T17:10:42.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "recommendations.html",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\recommendations.html",
-              "RelativeDocumentMoniker": "studyapp.client\\recommendations.html",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\recommendations.html",
-              "RelativeToolTip": "studyapp.client\\recommendations.html",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T20:19:09.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "pastStudySessions.html",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastStudySessions.html",
-              "RelativeDocumentMoniker": "studyapp.client\\pastStudySessions.html",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastStudySessions.html",
-              "RelativeToolTip": "studyapp.client\\pastStudySessions.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T17:10:17.943Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "pastMusicSessions.html",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastMusicSessions.html",
-              "RelativeDocumentMoniker": "studyapp.client\\pastMusicSessions.html",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\pastMusicSessions.html",
-              "RelativeToolTip": "studyapp.client\\pastMusicSessions.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T17:10:21.093Z",
+              "WhenOpened": "2024-11-19T17:10:42.492Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 21,
               "Title": "musicAnalytics.html",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\musicAnalytics.html",
               "RelativeDocumentMoniker": "studyapp.client\\musicAnalytics.html",
               "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\musicAnalytics.html",
               "RelativeToolTip": "studyapp.client\\musicAnalytics.html",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T17:10:24.895Z"
+              "WhenOpened": "2024-11-19T17:10:24.895Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\index.html",
-              "RelativeDocumentMoniker": "studyapp.client\\index.html",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\index.html",
-              "RelativeToolTip": "studyapp.client\\index.html",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T06:46:30.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "index.css",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\index.css",
-              "RelativeDocumentMoniker": "studyapp.client\\src\\index.css",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\index.css",
-              "RelativeToolTip": "studyapp.client\\src\\index.css",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEcAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-19T06:48:33.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "studySession.html",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\studySession.html",
-              "RelativeDocumentMoniker": "studyapp.client\\studySession.html",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\studySession.html",
-              "RelativeToolTip": "studyapp.client\\studySession.html",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAABwAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T16:59:14.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 24,
               "Title": "rewards.html",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\rewards.html",
               "RelativeDocumentMoniker": "studyapp.client\\rewards.html",
               "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\rewards.html",
               "RelativeToolTip": "studyapp.client\\rewards.html",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABtAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBEAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-19T17:10:13.446Z"
+              "WhenOpened": "2024-11-19T17:10:13.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 25,
               "Title": "stopwatch.js",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\stopwatch.js",
               "RelativeDocumentMoniker": "studyapp.client\\stopwatch.js",
@@ -215,71 +475,12 @@
               "RelativeToolTip": "studyapp.client\\stopwatch.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-19T19:50:45.148Z"
+              "WhenOpened": "2024-11-19T19:50:45.148Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Program.cs",
-              "RelativeDocumentMoniker": "StudyApp.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Program.cs",
-              "RelativeToolTip": "StudyApp.Server\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T17:18:21.608Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "vite.config.js",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\vite.config.js",
-              "RelativeDocumentMoniker": "studyapp.client\\vite.config.js",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\vite.config.js",
-              "RelativeToolTip": "studyapp.client\\vite.config.js",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAACIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-19T06:23:17.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "StudyApp.Server\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "StudyApp.Server\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAAwFAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:10:19.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "main.jsx",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\main.jsx",
-              "RelativeDocumentMoniker": "studyapp.client\\src\\main.jsx",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\main.jsx",
-              "RelativeToolTip": "studyapp.client\\src\\main.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-19T07:19:50.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "App.jsx",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\App.jsx",
-              "RelativeDocumentMoniker": "studyapp.client\\src\\App.jsx",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\src\\App.jsx",
-              "RelativeToolTip": "studyapp.client\\src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-11-19T18:56:09.162Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 26,
               "Title": "launch.json",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\.vscode\\launch.json",
               "RelativeDocumentMoniker": "studyapp.client\\.vscode\\launch.json",
@@ -287,11 +488,12 @@
               "RelativeToolTip": "studyapp.client\\.vscode\\launch.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-19T06:33:43.371Z"
+              "WhenOpened": "2024-11-19T06:33:43.371Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 27,
               "Title": "graph.png",
               "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\studyapp.client\\public\\graph.png",
               "RelativeDocumentMoniker": "studyapp.client\\public\\graph.png",
@@ -299,17 +501,6 @@
               "RelativeToolTip": "studyapp.client\\public\\graph.png",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
               "WhenOpened": "2024-11-19T16:46:48.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "StudyApp.Server",
-              "DocumentMoniker": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.csproj",
-              "RelativeDocumentMoniker": "StudyApp.Server\\StudyApp.Server.csproj",
-              "ToolTip": "C:\\Users\\sydne\\source\\repos\\StudyApp\\StudyApp.Server\\StudyApp.Server.csproj",
-              "RelativeToolTip": "StudyApp.Server\\StudyApp.Server.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-19T06:05:57.206Z"
             }
           ]
         }
