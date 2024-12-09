@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Typography, Slider, Button, Box } from '@mui/material';
+import axios from './axios';
 
 const SurveyPage = () => {
   const [productivity, setProductivity] = useState(5); // Default value is 5
@@ -17,13 +18,12 @@ const SurveyPage = () => {
       return;
     }
     try {
-      const response = await fetch('http://localhost:5123/api/productivity', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId, rating: productivity }),
+      const response = await axios.post('/Auth/productivity', {
+        userId: parseInt(userId),
+        rating: productivity,
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         alert('Productivity rating recorded!');
       } else {
         alert('Error recording productivity rating');
@@ -63,6 +63,7 @@ const SurveyPage = () => {
         color="primary"
         onClick={handleSubmit}
         sx={{ mt: 2 }}
+        fullWidth
       >
         Submit
       </Button>

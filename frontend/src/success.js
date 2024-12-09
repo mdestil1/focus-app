@@ -1,23 +1,39 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Container, Typography, Box } from '@mui/material';
+import axios from './axios';
 
 const Success = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Redirect to the dashboard after 2 seconds
-    const timer = setTimeout(() => {
-      navigate('/dashboard');
-    }, 2000);
-    
-    return () => clearTimeout(timer);
+    const verifyPayment = async () => {
+      try {
+        const response = await axios.get('/Auth/me');
+        if (response.data.isPaid) {
+          localStorage.setItem('isPaid', 'true');
+          navigate('/dashboard');
+        } else {
+          navigate('/checkout');
+        }
+      } catch (error) {
+        console.error('Error verifying payment:', error);
+        navigate('/login');
+      }
+    };
+
+    verifyPayment();
   }, [navigate]);
 
   return (
-    <div>
-      <h2>Payment Successful!</h2>
-      <p>Redirecting to your study dashboard...</p>
-    </div>
+    <Container maxWidth="sm" sx={{ mt: 8 }}>
+      <Box sx={{ textAlign: 'center' }}>
+        <Typography variant="h4" gutterBottom>
+          Payment Successful!
+        </Typography>
+        <Typography variant="body1">Redirecting to your dashboard...</Typography>
+      </Box>
+    </Container>
   );
 };
 

@@ -1,31 +1,37 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, TextField, Button, Typography, Paper, Box } from '@mui/material';
+import axios from './axios'; // Adjust the path as necessary
+import {
+  Container,
+  TextField,
+  Button,
+  Typography,
+  Box,
+  Paper,
+} from '@mui/material';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
+  const [identifier, setIdentifier] = useState(''); // Can be email or username
   const [password, setPassword] = useState('');
 
   const handleLogin = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:5123/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('/Auth/login', {
+        identifier,
+        password,
       });
 
-      const data = await response.json();
-      if (response.ok) {
-        localStorage.setItem('userId', data.userId);
+      if (response.status === 200) {
+        const { token } = response.data;
+        localStorage.setItem('token', token);
         navigate('/dashboard');
-      } else {
-        alert(data.message || 'Invalid username or password');
       }
     } catch (error) {
       console.error('Login error:', error);
-      alert('Error logging in. Please try again.');
+      alert(error.response?.data?.message || 'Invalid credentials. Please try again.');
     }
   };
 
@@ -37,12 +43,12 @@ const Login = () => {
         </Typography>
         <form onSubmit={handleLogin}>
           <TextField
-            label="Username"
+            label="Email or Username"
             variant="outlined"
             fullWidth
             required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            value={identifier}
+            onChange={(e) => setIdentifier(e.target.value)}
             sx={{ mb: 2 }}
           />
           <TextField
@@ -57,7 +63,7 @@ const Login = () => {
           />
           <Box sx={{ mt: 3 }}>
             <Button type="submit" variant="contained" color="primary" fullWidth>
-              Log In
+              Login
             </Button>
           </Box>
         </form>

@@ -1,41 +1,51 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from './axios'; // Adjust the path as necessary
 import {
   Container,
   TextField,
   Button,
   Typography,
-  FormControlLabel,
-  Checkbox,
   Box,
   Paper,
 } from '@mui/material';
 
 const Signup = () => {
   const navigate = useNavigate();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    username: '',
+    email: '',
+    password: '',
+  });
+
+  const { firstName, lastName, username, email, password } = formData;
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSignup = async (e) => {
     e.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:5123/api/signup', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post('/Auth/signup', {
+        firstName,
+        lastName,
+        username,
+        email,
+        password,
       });
 
-      const data = await response.json();
-      if (response.ok) {
-        localStorage.setItem('userId', data.userId);
-        navigate('/checkout');
-      } else {
-        alert(data.message || 'Error signing up');
+      if (response.status === 201) {
+        const { token } = response.data;
+        localStorage.setItem('token', token);
+        navigate('/dashboard');
       }
     } catch (error) {
       console.error('Signup error:', error);
-      alert('Error signing up. Please try again.');
+      alert(error.response?.data?.message || 'Error signing up. Please try again.');
     }
   };
 
@@ -47,37 +57,60 @@ const Signup = () => {
         </Typography>
         <form onSubmit={handleSignup}>
           <TextField
+            label="First Name"
+            name="firstName"
+            variant="outlined"
+            fullWidth
+            required
+            value={firstName}
+            onChange={handleChange}
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            label="Last Name"
+            name="lastName"
+            variant="outlined"
+            fullWidth
+            required
+            value={lastName}
+            onChange={handleChange}
+            sx={{ mb: 2 }}
+          />
+          <TextField
             label="Username"
+            name="username"
             variant="outlined"
             fullWidth
             required
             value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={handleChange}
+            sx={{ mb: 2 }}
+          />
+          <TextField
+            label="Email"
+            name="email"
+            type="email"
+            variant="outlined"
+            fullWidth
+            required
+            value={email}
+            onChange={handleChange}
             sx={{ mb: 2 }}
           />
           <TextField
             label="Password"
+            name="password"
             type="password"
             variant="outlined"
             fullWidth
             required
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleChange}
             sx={{ mb: 2 }}
-          />
-          <FormControlLabel
-            control={
-              <Checkbox
-                checked={rememberMe}
-                onChange={() => setRememberMe(!rememberMe)}
-                color="primary"
-              />
-            }
-            label="Remember Me"
           />
           <Box sx={{ mt: 3 }}>
             <Button type="submit" variant="contained" color="primary" fullWidth>
-              Continue to Checkout
+              Sign Up
             </Button>
           </Box>
         </form>

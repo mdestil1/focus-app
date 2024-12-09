@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from './axios'; // Use the axios instance
 import {
   Container,
   Typography,
@@ -8,6 +9,7 @@ import {
   CardContent,
   CardActions,
   Box,
+  Paper,
 } from '@mui/material';
 
 const Checkout = () => {
@@ -16,24 +18,16 @@ const Checkout = () => {
 
   const handleCheckout = async () => {
     try {
-      // Send a post request to backend to create a Stripe checkout session
-      const response = await fetch('http://localhost:5123/create-checkout-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-      });
+      const userId = localStorage.getItem('userId');
+      const response = await axios.post('/Payment/create-checkout-session', { userId: parseInt(userId) });
 
-      // Check if the response is successful
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (response.status === 200) {
+        const { url } = response.data;
+        window.location.href = url;
+      } else {
+        throw new Error('Failed to create checkout session');
       }
-
-      // Parse the JSON response to get the checkout URL
-      const { url } = await response.json();
-
-      // Redirect user to the Stripe checkout page
-      window.location.href = url;
     } catch (error) {
-      // Handle any errors that occur during the checkout process
       console.error('Error creating checkout session:', error);
       alert('There was an error initiating the payment. Please try again later.');
     }
@@ -41,37 +35,34 @@ const Checkout = () => {
 
   return (
     <Container maxWidth="sm" sx={{ mt: 8 }}>
-      {/* Card containing checkout information */}
-      <Card elevation={3}>
-        <CardContent>
-          <Typography variant="h4" gutterBottom>
-            Checkout
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Subscribe to unlock all features and maximize your productivity.
-          </Typography>
-          <Typography variant="h5" color="primary" gutterBottom>
-            {subscriptionPrice}
-          </Typography>
-        </CardContent>
-        <CardActions sx={{ justifyContent: 'center', mb: 2 }}>
-          {/* Pay Now button which triggers the handleCheckout function */}
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={handleCheckout}
-            sx={{ width: '80%' }}
-          >
-            Pay Now
+      <Paper elevation={3} sx={{ p: 4 }}>
+        <Typography variant="h4" gutterBottom align="center">
+          Checkout
+        </Typography>
+        <Card elevation={3}>
+          <CardContent>
+            <Typography variant="h5" gutterBottom>
+              Subscribe to Premium
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Unlock all features and maximize your productivity.
+            </Typography>
+            <Typography variant="h6" color="primary" gutterBottom>
+              {subscriptionPrice}
+            </Typography>
+          </CardContent>
+          <CardActions sx={{ justifyContent: 'center', mb: 2 }}>
+            <Button variant="contained" color="primary" onClick={handleCheckout} sx={{ width: '80%' }}>
+              Pay Now
+            </Button>
+          </CardActions>
+        </Card>
+        <Box sx={{ textAlign: 'center', mt: 2 }}>
+          <Button variant="text" onClick={() => navigate('/')}>
+            Back to Home
           </Button>
-        </CardActions>
-      </Card>
-      {/* Back to Home button */}
-      <Box sx={{ textAlign: 'center', mt: 2 }}>
-        <Button variant="text" onClick={() => navigate('/')}>
-          Back to Home
-        </Button>
-      </Box>
+        </Box>
+      </Paper>
     </Container>
   );
 };
