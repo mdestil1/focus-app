@@ -1,6 +1,7 @@
+// Signup.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from './axios'; // Adjust the path as necessary
+import axios from './axios';
 import {
   Container,
   TextField,
@@ -38,7 +39,7 @@ const Signup = () => {
         password,
       });
 
-      if (response.status === 201) {
+      if (response.status === 200) {
         const { token } = response.data;
         localStorage.setItem('token', token);
         navigate('/dashboard');
