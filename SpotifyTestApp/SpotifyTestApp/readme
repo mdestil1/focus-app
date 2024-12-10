@@ -1,0 +1,17 @@
+Switch to branch:
+git fetch origin
+git checkout DB
+
+
+
+cd  SpotifyTestApp
+cd  SpotifyTestApp
+dotnet run
+docker compose up -d
+
+
+
+new terminal:
+cd frontend
+npm install
+npm start
