@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Session</title>
+    <link rel="stylesheet" href="/src/index.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>STUDISSIMO</h1>
+    <div class="nav">
+        <ul>
+            <li><button type="button"><a href="dashboard.html"><p>Dashboard</p></a></button></li>
+            <li><button type="button"><a href="studySession.html"><p>Study Session</p></a></button></li>
+            <li><button type="button"><a href="musicAnalytics.html"><p>Music Analytics</p></a></button></li>
+            <li><button type="button"><a href="pastMusicSessions.html"><p>Music History</p></a></button></li>
+            <li><button type="button"><a href="recommendations.html"><p>Recommendations</p></a></button></li>
+            <li><button type="button"><a href="yourStudent.html"><p>Your Student</p></a></button></li>
+            <li><button type="button"><a href="rewards.html"><p>Rewards</p></a></button></li>
+        </ul>
+    </div>
+    <p style="color:white; padding: 20px; margin:auto;">Past Study Sessions</p>
+    <div class="center">
+
+        <form id="pixelaSignUpForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <small>Must be between 2-32 characters long.</small><br>
+            <small>Must include at least one letter, all letters must be lowercase, and no special characters are allowed.</small><br><br>
+
+            <label for="token">Token:</label><br>
+            <input type="text" id="token" name="token" minlength="8" maxlength="128" required><br>
+            <small>Your token must be between 8-128 characters long.</small><br><br>
+            <button type="submit">Submit</button><br>
+        </form>
+
+
+
+        <div id="response"></div>
+
+        <script>
+            $(document).ready(function () {
+                $('#pixelaSignUpForm').on('submit', function (e) {
+                    e.preventDefault();
+
+                    const formData = {
+                        username: $('#username').val(),
+                        token: $('#token').val()
+                    };
+
+                    $.ajax({
+                        url: 'https://localhost:7104/api/PixelaSignUp/pixelaSignUpForm',
+                        type: 'POST',
+                        data: JSON.stringify(formData),
+                        contentType: 'application/json', // Specify JSON content type
+                        success: function (response) {
+                            console.log("Success:", response);
+                            $('#response').html(`<p>${response.message}</p>`);
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error:", xhr.responseText, status, error);
+                            $('#response').html(`<p>Error: ${xhr.responseText}</p>`);
+                        }
+                    });
+                });
+            });
+        </script>
+
+
+    </div>
+</body>
+</html>
