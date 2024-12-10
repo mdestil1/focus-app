@@ -5,10 +5,10 @@ import Home from './Home';
 import Signup from './Signup';
 import Login from './Login';
 import Checkout from './Checkout';
-import Success from './Success';
-import Cancel from './Cancel';
+import Success from './success';
+import Cancel from './cancel';
 import Dashboard from './Dashboard';
-import StudyZone from './StudyZone';
+import StudyZone from './Studyzone';
 import SurveyPage from './SurveyPage';
 import PrivateRoute from './PrivateRoute'; // Import the PrivateRoute
 
