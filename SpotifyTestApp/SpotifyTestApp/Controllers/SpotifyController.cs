@@ -154,12 +154,10 @@ namespace SpotifyTestApp.Controllers
             }
 
             // Calculate audio features, genre, and productivity score
-            var averageAudioFeatures = await CalculateAverageAudioFeatures(studyTracks);
             var genre = await DetermineMostPlayedGenre(studyTracks);
-            var productivity = GetProductivityScore();
+            
 
-            // Serialize the audio features dictionary to a JSON string
-            var audioFeaturesJson = JsonConvert.SerializeObject(averageAudioFeatures);
+            
 
             // Save session to the database
             var studySession = new StudySession
@@ -168,7 +166,6 @@ namespace SpotifyTestApp.Controllers
                 StudyDate = sessionStartTime,
                 //SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
                 MusicHistory = studyTracks.Select(t => t.Name).ToList(),
-                Productivity = productivity,
                 Genre = genre
             };
 

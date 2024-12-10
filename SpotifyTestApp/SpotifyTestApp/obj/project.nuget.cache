@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0oFpJN6Kkv4=",
+  "dgSpecHash": "U8sbtOXlO7U=",
   "success": true,
-  "projectFilePath": "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\SpotifyTestApp.csproj",
+  "projectFilePath": "C:\\Users\\miked\\OneDrive\\Documents\\focus-app-2\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\miked\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\miked\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
