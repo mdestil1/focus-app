@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {}
+    "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {
+    "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+        "projectUniqueName": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
         "projectName": "SpotifyTestApp",
-        "projectPath": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+        "projectPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
         "packagesPath": "C:\\Users\\vince\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\obj\\",
+        "outputPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vince\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "stSVHiyFaHY=",
+  "dgSpecHash": "TlPSG4RzEy8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+  "projectFilePath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vince\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vince\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

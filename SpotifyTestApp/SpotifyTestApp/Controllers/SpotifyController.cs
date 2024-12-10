@@ -14,12 +14,6 @@ using Microsoft.EntityFrameworkCore;
 using SpotifyTestApp.Data;
 using Newtonsoft.Json;
 
-/*
-using CsvHelper;
-using CsvHelper.Configuration;
-using System.Globalization;
-*/
-
 namespace SpotifyTestApp.Controllers
 {
     [Route("")]
@@ -63,7 +57,6 @@ namespace SpotifyTestApp.Controllers
                 CodeChallengeMethod = "S256",
                 CodeChallenge = challenge,
                 Scope = new[] { Scopes.UserReadCurrentlyPlaying, Scopes.UserReadEmail, Scopes.UserReadPrivate , Scopes.PlaylistModifyPrivate, Scopes.PlaylistModifyPublic}
-                //Not fit for SpotifyAPI.NET: Scope = new[] { "user-read-private", "user-read-email", "user-read-currently-playing" }
             };
 
             return Redirect(request.ToUri().ToString());
@@ -150,17 +143,14 @@ namespace SpotifyTestApp.Controllers
             {
                 UserId = HttpContext.Session.GetString("UserId"), // Retrieve user ID from session
                 StudyDate = sessionStartTime,
-                SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
+                //SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
                 MusicHistory = studyTracks.Select(t => t.Name).ToList(),
                 Productivity = productivity,
                 Genre = genre
             };
 
-            _context.StudySessions.Add(studySession);
-            await _context.SaveChangesAsync();
-
-            // Process tracks and update study session stats
-            //ProcessTracks(studyTracks);
+            //_context.StudySessions.Add(studySession);
+            //await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
@@ -221,58 +211,6 @@ namespace SpotifyTestApp.Controllers
                 return null;
             }
         }
-
-        // Helper Methods
-        private async Task<Dictionary<string, double>> CalculateAverageAudioFeatures(List<FullTrack> tracks)
-        {
-            var audioFeatures = new Dictionary<string, double>
-            {
-                { "Tempo", 0 },
-                { "Instrumentalness", 0 },
-                { "Energy", 0 },
-                { "Acousticness", 0 },
-                { "Danceability", 0 },
-                { "Loudness", 0 },
-                { "Speechiness", 0 },
-                { "Valence", 0 }
-            };
-
-            foreach (var track in tracks)
-            {
-                try
-                {
-                    var features = await _spotify.Tracks.GetAudioFeatures(track.Id);
-                    audioFeatures["Tempo"] += features.Tempo;
-                    audioFeatures["Instrumentalness"] += features.Instrumentalness;
-                    audioFeatures["Energy"] += features.Energy;
-                    audioFeatures["Acousticness"] += features.Acousticness;
-                    audioFeatures["Danceability"] += features.Danceability;
-                    audioFeatures["Loudness"] += features.Loudness;
-                    audioFeatures["Speechiness"] += features.Speechiness;
-                    audioFeatures["Valence"] += features.Valence;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error fetching audio features for track {track.Name}: {ex.Message}");
-                    continue; // Skip this track if there was an error
-                }
-            }
-
-            // Calculate averages
-            if (tracks.Count > 0)
-            {
-                audioFeatures["Tempo"] /= tracks.Count;
-                audioFeatures["Energy"] /= tracks.Count;
-                audioFeatures["Acousticness"] /= tracks.Count;
-                audioFeatures["Instrumentalness"] /= tracks.Count;
-                audioFeatures["Danceability"] /= tracks.Count;
-                audioFeatures["Loudness"] /= tracks.Count;
-                audioFeatures["Speechiness"] /= tracks.Count;
-                audioFeatures["Valence"] /= tracks.Count;
-            }
-
-            return audioFeatures;
-        }
         public async Task<string> DetermineMostPlayedGenre(List<FullTrack> tracks)
         {
             var genreCounts = new Dictionary<string, int>();
@@ -321,244 +259,13 @@ namespace SpotifyTestApp.Controllers
             return mostPlayedGenre.Key; // Return the genre with the highest play count
         }
 
+        /*
         //Modify: Change it to get from survey
         private int GetProductivityScore()
         {
             // Example: Calculate productivity score based on some metrics (e.g., time spent studying, focus, etc.)
             return new Random().Next(1, 11); // Random for demonstration; replace with actual logic
         }
-
-
-        /*
-        // Helper Method: Process Tracks (Simulated) --> Using csv files
-        private void ProcessTracks(List<FullTrack> tracks)
-        {
-            if(tracks == null || tracks.Count == 0)
-            {
-                Console.WriteLine("No tracks to process.");
-                return;
-            }
-
-            //Counter for total number of study sessions
-            var sessionId = HttpContext.Session.GetInt32("TotalStudySessions") ?? 0;
-            sessionId++;
-            HttpContext.Session.SetInt32("TotalStudySessions", sessionId);
-
-            //Continue here/Modification --> Figure out how to save in db
-            var csvFilePath = Path.Combine(Directory.GetCurrentDirectory(), $"studysession{sessionId}.csv");
-
-            // Save track details to a CSV file
-            SaveTracksToCsv(tracks, csvFilePath);
-
-            // Update session-level averages
-            UpdateSessionMetrics(csvFilePath);
-
-            Console.WriteLine($"Study session {sessionId} processed and saved to {csvFilePath}");
-        }
         */
-
-        /*
-        //Helper Method: Save the list of tracks to a CSV file
-        private void SaveTracksToCsv(List<FullTrack> tracks, string filePath)
-        {
-            using (var writer = new StreamWriter(filePath))
-            using (var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)))
-            {
-                csv.WriteRecords(tracks.Select(t => new
-                {
-                    Name = t.Name,
-                    Artists = string.Join(", ", t.Artists.Select(a => a.Name)),
-                    DurationMs = t.DurationMs,
-                    Album = t.Album.Name
-                }));
-            }
-        }
-        //Helper Method: Update study music data
-        private void UpdateSessionMetrics(string csvFilePath)
-        {
-            var totalSongs = HttpContext.Session.GetInt32("TotalSongs") ?? 0;
-            var totalMetrics = new
-            {
-                Acousticness = HttpContext.Session.GetDouble("AvgAcousticness") * totalSongs,
-                DurationMs = HttpContext.Session.GetDouble("AvgDurationMs") * totalSongs,
-                Energy = HttpContext.Session.GetDouble("AvgEnergy") * totalSongs,
-                Instrumentalness = HttpContext.Session.GetDouble("AvgInstrumentalness") * totalSongs,
-                Liveness = HttpContext.Session.GetDouble("AvgLiveness") * totalSongs,
-                Loudness = HttpContext.Session.GetDouble("AvgLoudness") * totalSongs,
-                Speechiness = HttpContext.Session.GetDouble("AvgSpeechiness") * totalSongs,
-                Tempo = HttpContext.Session.GetDouble("AvgTempo") * totalSongs,
-                Valence = HttpContext.Session.GetDouble("AvgValence") * totalSongs
-            };
-
-            var audioFeatures = GetAudioFeatures(csvFilePath);
-
-            foreach (var track in audioFeatures)
-            {
-                totalMetrics = new
-                {
-                    Acousticness = totalMetrics.Acousticness + track.Acousticness,
-                    DurationMs = totalMetrics.DurationMs + track.DurationMs,
-                    Energy = totalMetrics.Energy + track.Energy,
-                    Instrumentalness = totalMetrics.Instrumentalness + track.Instrumentalness,
-                    Liveness = totalMetrics.Liveness + track.Liveness,
-                    Loudness = totalMetrics.Loudness + track.Loudness,
-                    Speechiness = totalMetrics.Speechiness + track.Speechiness,
-                    Tempo = totalMetrics.Tempo + track.Tempo,
-                    Valence = totalMetrics.Valence + track.Valence
-                };
-                totalSongs++;
-            }
-
-            // Update session averages
-            HttpContext.Session.SetDouble("AvgAcousticness", totalMetrics.Acousticness / totalSongs);
-            HttpContext.Session.SetDouble("AvgDurationMs", totalMetrics.DurationMs / totalSongs);
-            HttpContext.Session.SetDouble("AvgEnergy", totalMetrics.Energy / totalSongs);
-            HttpContext.Session.SetDouble("AvgInstrumentalness", totalMetrics.Instrumentalness / totalSongs);
-            HttpContext.Session.SetDouble("AvgLiveness", totalMetrics.Liveness / totalSongs);
-            HttpContext.Session.SetDouble("AvgLoudness", totalMetrics.Loudness / totalSongs);
-            HttpContext.Session.SetDouble("AvgSpeechiness", totalMetrics.Speechiness / totalSongs);
-            HttpContext.Session.SetDouble("AvgTempo", totalMetrics.Tempo / totalSongs);
-            HttpContext.Session.SetDouble("AvgValence", totalMetrics.Valence / totalSongs);
-
-            HttpContext.Session.SetInt32("TotalSongs", totalSongs);
-        }
-
-        //Adding Extension Methods to HttpContext.Session to support double
-        public static class SessionExtensions
-        {
-            public static void SetDouble(this ISession session, string key, double value)
-            {
-                session.SetString(key, value.ToString(CultureInfo.InvariantCulture));
-            }
-
-            public static double GetDouble(this ISession session, string key)
-            {
-                var value = session.GetString(key);
-                return value != null ? double.Parse(value, CultureInfo.InvariantCulture) : 0.0;
-            }
-        }
-        */
-
-        // Endpoint: Create StudyTask-specific playlist in Spotify
-        [HttpGet("create-studyplaylist")]
-        public async Task<IActionResult> CreatePlaylist(string studyTaskName, string[] genres)
-        {
-            try
-            {
-                // Ensure the SpotifyClient is initialized with a valid access token
-                var accessToken = HttpContext.Session.GetString("AccessToken");
-                if (string.IsNullOrEmpty(accessToken))
-                {
-                    Console.WriteLine("Access token is missing or invalid");
-                    return RedirectToAction(nameof(Index));
-                }
-
-                var spotify = new SpotifyClient(accessToken);
-
-                // Step 1: Fetch cumulative SongAudioFeatures and compute average values
-                var allSessions = await _context.StudySessions.ToListAsync();
-                var cumulativeAudioFeatures = new Dictionary<string, double>();
-                int sessionCount = 0;
-
-                var audioFeaturesTarget = new Dictionary<string, string>();
-
-                foreach (var session in allSessions)
-                {
-                    var audioFeatures = JsonConvert.DeserializeObject<Dictionary<string, double>>(session.SongAudioFeaturesJson);
-                    if (audioFeatures == null) continue;
-
-                    foreach (var feature in audioFeatures)
-                    {
-                        if (cumulativeAudioFeatures.ContainsKey(feature.Key))
-                            cumulativeAudioFeatures[feature.Key] += feature.Value;
-                        else
-                            cumulativeAudioFeatures[feature.Key] = feature.Value;
-                    }
-                    sessionCount++;
-                }
-
-                // Calculate average audio features
-                foreach (var key in cumulativeAudioFeatures.Keys.ToList())
-                {
-                    cumulativeAudioFeatures[key] /= sessionCount;
-                    audioFeaturesTarget[key] = cumulativeAudioFeatures[key].ToString();
-                }
-
-                // Step 2: Generate recommendations based on audio features and genres
-                var recommendationsRequest = new RecommendationsRequest
-                {
-                    //Modify: Use more SongAudioFeatures
-                    //SeedGenres = genres.ToList(), // Convert array to List<string>
-                    //TargetDanceability = (float?)cumulativeAudioFeatures.GetValueOrDefault("Danceability"),
-                    //TargetEnergy = (float?)cumulativeAudioFeatures.GetValueOrDefault("Energy"),
-                    //TargetTempo = (float?)cumulativeAudioFeatures.GetValueOrDefault("Tempo")
-                };
-
-                //Continue here: Fix the error ("SeedGenres.Add" works?)
-                foreach (var genre in genres)
-                {
-                    recommendationsRequest.SeedGenres.Add(genre);
-                }
-
-                recommendationsRequest.AddCustomQueryParams(audioFeaturesTarget);
-
-                var recommendations = await spotify.Browse.GetRecommendations(recommendationsRequest);
-                
-                var userProfile = await spotify.UserProfile.Current();
-                var userId = userProfile.Id;
-
-                // Prepare the playlist creation request
-                var playlistRequest = new PlaylistCreateRequest(studyTaskName)
-                {
-                    Description = $"Playlist created for study task: {studyTaskName}",
-                    Public = false // Change to true if you want a public playlist
-                };
-
-                // Create the playlist
-                var newPlaylist = await spotify.Playlists.Create(userId, playlistRequest);
-
-                Console.WriteLine($"Playlist '{studyTaskName}' created successfully with ID: {newPlaylist.Id}");
-
-                // Step 4: Add recommended tracks to the playlist
-                var trackUris = recommendations.Tracks.Select(t => t.Uri).ToList();
-                if (trackUris.Count > 0)
-                {
-                    await spotify.Playlists.AddItems(newPlaylist.Id, new PlaylistAddItemsRequest(trackUris));
-                    Console.WriteLine("Tracks added to the playlist successfully.");
-                }
-                else
-                {
-                    Console.WriteLine("No tracks were recommended based on the provided features.");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error creating playlist: {ex.Message}");
-            }
-
-            return RedirectToAction(nameof(Index));
-        }
-
-        /*
-        // Helper Method: Generate Recommendations from music data
-        public async Task<IActionResult> GenerateRecommendations()
-        {
-            //Update depend on user's inputs
-            var seedGenres = new[] { "anime", "groove", "guitar" };
-            var accessToken = HttpContext.Session.GetString("AccessToken");
-
-            _spotify = new SpotifyClient(accessToken);
-
-            var recommendations = await _spotify.Browse.GetRecommendations(new RecommendationsRequest
-            {
-                SeedGenres = seedGenres,
-                TargetEnergy = 0.7f,
-                TargetTempo = 120
-            });
-
-            return Ok(recommendations?.Tracks);
-        }
-        */
-        
     }
 }
