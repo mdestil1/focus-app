@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {}
+    "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\SpotifyTestApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj": {
+    "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\SpotifyTestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+        "projectUniqueName": "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\SpotifyTestApp.csproj",
         "projectName": "SpotifyTestApp",
-        "projectPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
-        "packagesPath": "C:\\Users\\vince\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\obj\\",
+        "projectPath": "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\SpotifyTestApp.csproj",
+        "packagesPath": "C:\\Users\\miked\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\miked\\focus-app-12\\spotifyTestApp\\spotifyTestApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
