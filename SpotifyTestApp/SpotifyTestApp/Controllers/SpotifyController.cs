@@ -29,7 +29,6 @@ namespace SpotifyTestApp.Controllers
             _redirectUri = _config["Spotify:RedirectUri"];
             _context = context;
         }
-
         // GET: api/Spotify/me
         [HttpGet("me")]
         public async Task<IActionResult> GetMe()
@@ -54,7 +53,6 @@ namespace SpotifyTestApp.Controllers
 
             return Ok(user);
         }
-
         private SpotifyClient _spotify;
 
         // Endpoint: Home
