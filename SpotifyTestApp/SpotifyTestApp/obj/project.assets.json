@@ -4546,11 +4546,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\miked\\OneDrive\\Desktop\\focus-app-4\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+      "projectUniqueName": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
       "projectName": "SpotifyTestApp",
-      "projectPath": "C:\\Users\\miked\\OneDrive\\Desktop\\focus-app-4\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
-      "packagesPath": "C:\\Users\\miked\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\miked\\OneDrive\\Desktop\\focus-app-4\\SpotifyTestApp\\SpotifyTestApp\\obj\\",
+      "projectPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+      "packagesPath": "C:\\Users\\vince\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

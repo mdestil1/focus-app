@@ -58,8 +58,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -68,7 +80,7 @@
               "RelativeDocumentMoniker": "SpotifyTestApp\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "SpotifyTestApp\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-08T20:55:12.481Z",
               "EditorCaption": ""
@@ -83,8 +95,7 @@
               "RelativeToolTip": "SpotifyTestApp\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-08T20:55:01.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-08T20:55:01.43Z"
             },
             {
               "$type": "Document",
@@ -180,8 +191,7 @@
               "RelativeToolTip": "SpotifyTestApp\\Controllers\\SpotifyController.cs",
               "ViewState": "AgIAANoBAAAAAAAAAAAAAJoAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:46:38.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T16:46:38.184Z"
             },
             {
               "$type": "Document",
