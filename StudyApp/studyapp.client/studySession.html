@@ -14,7 +14,6 @@
             <li><button type="button"><a href="pastStudySessions.html"><p>Past Study Sessions</p></a></button></li>
             <li><button type="button"><a href="musicAnalytics.html"><p>Music Analytics</p></a></button></li>
             <li><button type="button"><a href="pastMusicSessions.html"><p>Music History</p></a></button></li>
-            <li><button type="button"><a href="recommendations.html"><p>Recommendations</p></a></button></li>
             <li><button type="button"><a href="yourStudent.html"><p>Your Student</p></a></button></li>
             <li><button type="button"><a href="rewards.html"><p>Rewards</p></a></button></li>
         </ul>
@@ -22,14 +21,11 @@
     <p style="color:white; padding: 20px; margin:auto;">Start a Study Session!</p>
     <div class="center">
         <h2>LIST OF TASKS</h2>
-        <label for="task1"> Task 1: Complete the HTMl Frontend </label>
-        <input type="checkbox" id="task1" name="task1" value="task1"><br>
-        <label for="task2"> Task 2: Complete backend functionality </label>
-        <input type="checkbox" id="task2" name="task2" value="task2"><br>
-        <label for="task3"> Task 3: Link everything together </label>
-        <input type="checkbox" id="task3" name="task3" value="task3"><br><br>
-        <button type="button"><a href="recommendations.html"><p>Music Recommendations</p></a></button>
+        <div id="taskList"></div><br>
+        <input type="text" id="taskDescription" placeholder="Enter a task :)"><br>
+        <button id="addTaskButton" style="margin-top: 25px;">Add Task</button>
     </div>
+
     <div class="otherside">
         <div id="time">
             <span class="digit" id="hr">00</span>
@@ -43,9 +39,69 @@
         <br><br>
         <button type="button" class="circleButtons" id="start"><p>START</p></button>
         <button type="button" class="circleButtons" id="stop"><p>STOP</p></button>
+        <button type="button" class="circleButtons" id="finish"><p>FINISH</p></button>
         <button type="button" class="circleButtons" id="reset"><p>RESET</p></button>
     </div>
 
+    <div class="aboutUs">
+        <a href="aboutUs.html" style="margin-left:5px; margin-right:5px;">About Us</a>
+        <a href=""mailto:sydm@bu.edu" style="margin-right:5px;">Contact Us</a>
+        <a href="settings.html">Settings</a>
+    </div>
+
     <script src="stopwatch.js"></script>
+    <script>
+        // Track the number of tasks
+        let taskCount = 0;
+
+        // Function to add a new task
+        document.getElementById('addTaskButton').addEventListener('click', function () {
+            const taskDescription = document.getElementById('taskDescription').value;
+
+            // Ensure there's a description entered
+            if (taskDescription.trim() !== '') {
+                taskCount++; // Increment task count for new task
+
+                // Create a container div for the task
+                const taskContainer = document.createElement('div');
+                taskContainer.classList.add('task-container'); // Add a class for styling or removal purposes
+
+                // Create a new task label and checkbox dynamically
+                const taskLabel = document.createElement('label');
+                taskLabel.setAttribute('for', 'task' + taskCount);
+                taskLabel.textContent = taskDescription; // Set the text to the task description
+
+                const taskCheckbox = document.createElement('input');
+                taskCheckbox.type = 'checkbox';
+                taskCheckbox.id = 'task' + taskCount;
+                taskCheckbox.name = 'task' + taskCount;
+
+                // Create a delete button for each task
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('deleteButton');
+
+                // Add an event listener to delete the task when the button is clicked
+                deleteButton.addEventListener('click', function () {
+                    taskContainer.remove(); // Removes the entire task container, including label, checkbox, and button
+                });
+
+                // Append the new task elements to the task container
+                taskContainer.appendChild(taskLabel);
+                taskContainer.appendChild(taskCheckbox);
+                taskContainer.appendChild(deleteButton);
+
+                // Append the task container to the task list
+                const taskList = document.getElementById('taskList');
+                taskList.appendChild(taskContainer);
+
+                // Clear the input field after adding the task
+                document.getElementById('taskDescription').value = '';
+            } else {
+                alert('Please enter a task description');
+            }
+        });
+    </script>
+
 </body>
 </html>

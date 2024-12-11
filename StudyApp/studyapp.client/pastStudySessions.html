@@ -14,14 +14,13 @@
             <li><button type="button"><a href="studySession.html"><p>Study Session</p></a></button></li>
             <li><button type="button"><a href="musicAnalytics.html"><p>Music Analytics</p></a></button></li>
             <li><button type="button"><a href="pastMusicSessions.html"><p>Music History</p></a></button></li>
-            <li><button type="button"><a href="recommendations.html"><p>Recommendations</p></a></button></li>
             <li><button type="button"><a href="yourStudent.html"><p>Your Student</p></a></button></li>
             <li><button type="button"><a href="rewards.html"><p>Rewards</p></a></button></li>
         </ul>
     </div>
     <p style="color:white; padding: 20px; margin:auto;">Past Study Sessions</p>
     <div class="center">
-        <form id="pastStudySessionForm" action="/pastStudySessionResult" method="POST">
+        <form id="pastStudySessionsForm">
             <label for="studySessionDate">Date:</label><br>
             <input type="text" id="studySessionDate" name="studySessionDate"><br><br>
             <input type="submit" /><br>
@@ -31,5 +30,38 @@
         <button type="button" class="circleButtons" id="download"><p>DOWNLOAD GRAPH</p></button>
         <button type="button" class="circleButtons" id="openInPixela"><p>OPEN IN PIXELA</p></button>
     </div>
+    <div class="aboutUs">
+        <a href="aboutUs.html" style="margin-right:5px;">About Us</a>
+        <a href=""mailto:sydm@bu.edu" style="margin-right:5px;">Contact Us</a>
+        <a href="settings.html">Settings</a>
+    </div>
+
+    <script>
+    $(document).ready(function () {
+        $('#pastStudySessionsForm').on('submit', function (e) {
+            e.preventDefault();
+
+            const formData = {
+                studySessionData: $('#studySessionData').val(),
+            };
+
+            $.ajax({
+                url: 'https://localhost:7104/api/PastStudySessions/pastStudySessionsForm',
+                type: 'POST',
+                data: JSON.stringify(formData),
+                contentType: 'application/json', // Specify JSON content type
+                success: function (response) {
+                    console.log("Success:", response);
+                    $('#response').html(`<p>${response.message}</p>`);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error:", xhr.responseText, status, error);
+                    $('#response').html(`<p>Error: ${xhr.responseText}</p>`);
+                }
+            });
+        });
+    });
+    </script>
+
 </body>
 </html>

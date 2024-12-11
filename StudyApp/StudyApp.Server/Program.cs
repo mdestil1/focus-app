@@ -1,4 +1,7 @@
 using StudyApp.Server;
+using Microsoft.EntityFrameworkCore;
+using StudyApp.Server.Data;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +17,25 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddHttpClient<PixelaSignUpService>(client =>
+//SpotifyAPI
+//Addition: Added chunk from ChatGPT
+// Add session services
+builder.Services.AddDistributedMemoryCache(); // Use in-memory cache for sessions
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Session timeout
+    options.Cookie.HttpOnly = true; // Secure session cookies
+    options.Cookie.IsEssential = true; // Ensure session cookie is essential for GDPR compliance
+});
+
+// Register the DbContext with the connection string
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AppDBContext")));
+
+
+
+
+builder.Services.AddHttpClient<PixelaService>(client =>
 {
     // Optionally configure the HttpClient here
     client.BaseAddress = new Uri("https://pixe.la"); // Example base URL
@@ -42,6 +63,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowLocalhost");
+app.UseSession();
 app.MapControllers();
 app.MapFallbackToFile("/index.html");
 

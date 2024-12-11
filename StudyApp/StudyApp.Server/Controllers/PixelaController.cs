@@ -1,17 +1,19 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using StudyApp.Server.Models;
 using System.Net;
+using static StudyApp.Server.PixelaService;
 
 namespace StudyApp.Server.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     [EnableCors("AllowLocalhost")]
-    public class PixelaSignUpController : ControllerBase
+    public class PixelaController : ControllerBase
     {
-        private readonly PixelaSignUpService _pixelaService;
+        private readonly PixelaService _pixelaService;
 
-        public PixelaSignUpController(PixelaSignUpService pixelaService)
+        public PixelaController(PixelaService pixelaService)
         {
             _pixelaService = pixelaService;
         }
@@ -30,5 +32,7 @@ namespace StudyApp.Server.Controllers
             
             return BadRequest(ModelState);
         }
+
+
     }
 }

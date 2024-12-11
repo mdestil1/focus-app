@@ -2,7 +2,7 @@
 using System.Xml.Linq;
 
 
-namespace StudyApp.Server
+namespace StudyApp.Server.Models
 {
     public class PixelaSignUpModel
     {
