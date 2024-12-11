@@ -1,53 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\",
+  "WorkspaceRootPath": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\controllers\\spotifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\controllers\\spotifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\controllers\\spotifycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\models\\studysession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\models\\studysession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\models\\studysession.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\spotifytestapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\spotifytestapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\spotifytestapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\models\\reviewingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\models\\reviewingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\models\\rewatchingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\models\\rewatchingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\models\\brainstormingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\models\\brainstormingplaylist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\source\\repos\\spotifytestapp\\spotifytestapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|c:\\users\\vince\\onedrive\\desktop\\cs392\\focus-app\\spotifytestapp\\spotifytestapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{68B162DF-7E4C-43B6-A65F-2FADD4051ED8}|SpotifyTestApp\\SpotifyTestApp.csproj|solutionrelative:spotifytestapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -58,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,11 +62,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "SpotifyTestApp\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "SpotifyTestApp\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -87,131 +75,102 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Views\\_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "SpotifyTestApp\\Views\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Views\\_ViewImports.cshtml",
               "RelativeToolTip": "SpotifyTestApp\\Views\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-08T20:55:01.43Z"
+              "WhenOpened": "2024-12-08T20:55:01.43Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "SpotifyTestApp.csproj",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
               "RelativeDocumentMoniker": "SpotifyTestApp\\SpotifyTestApp.csproj",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\SpotifyTestApp.csproj",
               "RelativeToolTip": "SpotifyTestApp\\SpotifyTestApp.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-07T17:41:32.577Z"
+              "WhenOpened": "2024-12-07T17:41:32.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudySession.cs",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Models\\StudySession.cs",
+              "RelativeDocumentMoniker": "SpotifyTestApp\\Models\\StudySession.cs",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Models\\StudySession.cs",
+              "RelativeToolTip": "SpotifyTestApp\\Models\\StudySession.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-07T17:10:38.655Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "StudySession.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\StudySession.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Models\\StudySession.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\StudySession.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Models\\StudySession.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABCAAAAAAAAAA==",
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\appsettings.json",
+              "RelativeDocumentMoniker": "SpotifyTestApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\appsettings.json",
+              "RelativeToolTip": "SpotifyTestApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-04T18:21:32.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Program.cs",
+              "RelativeDocumentMoniker": "SpotifyTestApp\\Program.cs",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Program.cs",
+              "RelativeToolTip": "SpotifyTestApp\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T17:10:38.655Z"
+              "WhenOpened": "2024-12-04T16:59:47.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpotifyController.cs",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Controllers\\SpotifyController.cs",
+              "RelativeDocumentMoniker": "SpotifyTestApp\\Controllers\\SpotifyController.cs",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Controllers\\SpotifyController.cs",
+              "RelativeToolTip": "SpotifyTestApp\\Controllers\\SpotifyController.cs",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAuwAUBAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T16:46:38.184Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Data\\AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "SpotifyTestApp\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Data\\AppDbContext.cs",
               "RelativeToolTip": "SpotifyTestApp\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-07T17:03:42.989Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RewatchingPlaylist.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\RewatchingPlaylist.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Models\\RewatchingPlaylist.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\RewatchingPlaylist.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Models\\RewatchingPlaylist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:10:08.459Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\appsettings.json",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\appsettings.json",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\appsettings.json",
-              "RelativeToolTip": "SpotifyTestApp\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-04T18:21:32.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Program.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Program.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Program.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:59:47.324Z"
+              "WhenOpened": "2024-12-07T17:03:42.989Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ReviewingPlaylist.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\ReviewingPlaylist.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Models\\ReviewingPlaylist.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\ReviewingPlaylist.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Models\\ReviewingPlaylist.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA0wBMAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:07:53.06Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SpotifyController.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Controllers\\SpotifyController.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Controllers\\SpotifyController.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Controllers\\SpotifyController.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Controllers\\SpotifyController.cs",
-              "ViewState": "AgIAANoBAAAAAAAAAAAAAJoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T16:46:38.184Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BrainstormingPlaylist.cs",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\BrainstormingPlaylist.cs",
-              "RelativeDocumentMoniker": "SpotifyTestApp\\Models\\BrainstormingPlaylist.cs",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Models\\BrainstormingPlaylist.cs",
-              "RelativeToolTip": "SpotifyTestApp\\Models\\BrainstormingPlaylist.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T21:08:34.744Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "SpotifyTestApp\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\vince\\source\\repos\\SpotifyTestApp\\SpotifyTestApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vince\\OneDrive\\Desktop\\cs392\\focus-app\\SpotifyTestApp\\SpotifyTestApp\\Properties\\launchSettings.json",
               "RelativeToolTip": "SpotifyTestApp\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
