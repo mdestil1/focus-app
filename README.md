@@ -2,6 +2,39 @@
 ### The Goal: 
 A focus/study app that tracks your productivity and the music associated with your different levels of productivity. The app will show you your productivity over time, in addition to showing you how productive you are while listening to different genres of music, tracking your progress and rewarding you as you become more and more productive. The reward system will be something similar to a gatcha game, where the goal is to collect all of the characters, but ours will be related to music. Whatever music genre you listen to while studying will be what theme the character/reward you recieve will be based on, however if it's not the music genre that you're most productive during the reward won't be as good. For example, if you're most productive when listening to classical music however you choose to listen to pop music the reward for studying will more often be something smaller or of less value. However if you listen to classical music while studying the chance of recieving a bigger reward is higher. 
 
+#How To Use Our App:
+
+Once you’ve downloaded the files and opened the StudyApp.sln file in Visual Studios please press the green “Start” button.
+
+That takes you to our Dashboard where the journey to productivity can begin!
+
+Steps to a Study Session:
+1. On the Dashboard please click the “Sign into your Spotify Account” button
+     That will redirect you to the Spotify login page 
+     If you don’t want to log in with your own Spotify account you can use this one:
+       sydm42162@gmail.com
+	     testingcs392
+2. Once logged in, please click “Accept” the terms and you’ll be redirected to our Dashboard
+3. On the Dashboard please click the “Sign up for a Pixela Account” button
+      You can view your newly created account at: https://pixe.la/@{username}
+4. Once done with those tasks you can click on the button that says “Study Session”
+      You can enter a multitude of tasks on this page using the “Add Task” button and the tasks will later be saved to a database 
+      under the study session you completed (saving to a database isn’t set up but you can still add tasks)
+5. Once ready, click the “Start” button to start a study session
+      Above the buttons is a stopwatch that tells you how long you’ve been studying
+      “Stop” temporarily pauses the stopwatch but you can just click start to start it up again
+      “Reset” resets the stopwatch, so don’t hit it by accident or all your hard work will be lost >O<
+      While you’re studying the songs that you play on Spotify will be listed in the terminal, along with the percentage of how 
+      long you listened to the song
+6. Once you’re done studying, hit the “Finish” button
+7. You’ll be redirected to our survey, where we ask you to submit how productive you think you were on a scale of 1-10 (if you 
+   try to enter a number that’s not in that range it will let you – we didn’t get to implement error handling)
+8. Once you’ve submitted the survey you can feel free to navigate to another area of our app (the information from the survey does get sent to the backend we just didn’t have a database to store it in)
+
+
+
+
+
 ## Frontend:
 
 React/Material UI (MUI)  
