@@ -221,6 +221,7 @@ namespace StudyApp.Server.Controllers
         public async Task<IActionResult> StartStudySession()
         {
             var sessionStartTime = DateTime.Now;
+            DateTime sessionDateOnly = sessionStartTime.Date; // Removes the time part
             //var endStudySession = DateTime.Now;
             var studyTracks = new List<FullTrack>();
 
@@ -253,9 +254,9 @@ namespace StudyApp.Server.Controllers
             {
                 UserId = userID,
                 Token = token,
-                StudyDate = sessionStartTime,
+                StudyDate = sessionDateOnly.ToString("yyyy-MM-dd"),
                 Duration = DateTime.Now - sessionStartTime,
-                TasksJson = JsonConvert.SerializeObject(tasks),
+                TasksJson = JsonConvert.SerializeObject(tasks, Formatting.Indented),
                 MusicHistoryJson = JsonConvert.SerializeObject(studyTracks.Select(t => t.Name).ToList()),
                 Productivity = productivity,
                 Genre = genre

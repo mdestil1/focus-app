@@ -9,10 +9,26 @@ namespace StudyApp.Server.Controllers
     [EnableCors("AllowLocalhost")]
     public class PastStudySessionsController : Controller
     {
+        private readonly StudySessionService _studySessionService;
 
+        public PastStudySessionsController(StudySessionService studySessionService)
+        {
+            _studySessionService = studySessionService;
+        }
 
-        // POST api/pastStudySessionsForm
-        [HttpPost("pastStudySessionsForm")]
+        /** POST api/pastStudySessionsForm
+        [HttpPost("sessionData")]
+        public async Task<IActionResult> FindSession(string date, string userId, string token)
+        {
+            var studySession = _studySessionService.GetStudySession(date, userId, token);
+            if (studySession == null)
+            {
+                return NotFound("No session found.");
+            }
+
+            return View(studySession);
+        }**/
+
         public async Task<IActionResult> PastStudySessionDateRetrieval([FromBody] PastStudySessionsModel model)
         {
             if (ModelState.IsValid)

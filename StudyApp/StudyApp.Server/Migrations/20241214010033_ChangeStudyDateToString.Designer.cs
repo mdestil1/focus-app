@@ -12,8 +12,8 @@ using StudyApp.Server.Data;
 namespace StudyApp.Server.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20241211025912_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241214010033_ChangeStudyDateToString")]
+    partial class ChangeStudyDateToString
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,6 +51,10 @@ namespace StudyApp.Server.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("TasksJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

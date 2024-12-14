@@ -42,6 +42,9 @@ builder.Services.AddHttpClient<PixelaService>(client =>
     client.DefaultRequestHeaders.Add("User-Agent", "PixelaClientApp");
 });
 
+builder.Services.AddScoped<StudySessionService>();
+
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

@@ -11,7 +11,7 @@ namespace StudyApp.Server.Models
         public int Id { get; set; } // Auto-incrementing ID
         public string UserId { get; set; }
         public string Token { get; set; }
-        public DateTime StudyDate { get; set; }
+        public string StudyDate { get; set; }
         public TimeSpan Duration { get; set; }
         public string TasksJson { get; set; }
         public string MusicHistoryJson { get; set; } // List of song names or ids
