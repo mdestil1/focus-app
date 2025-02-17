@@ -9,5 +9,6 @@ namespace SpotifyTestApp.Data
 
         // Define your DbSets (tables)
         public DbSet<StudySession> StudySessions { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

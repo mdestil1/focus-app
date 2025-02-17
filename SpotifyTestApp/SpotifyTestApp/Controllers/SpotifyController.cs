@@ -29,7 +29,30 @@ namespace SpotifyTestApp.Controllers
             _redirectUri = _config["Spotify:RedirectUri"];
             _context = context;
         }
+        // GET: api/Spotify/me
+        [HttpGet("me")]
+        public async Task<IActionResult> GetMe()
+        {
+            var userId = User.FindFirst("UserId")?.Value;
 
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(new { message = "User not found." });
+            }
+
+            // Fetch user data from the database
+            var user = await _context.Users
+                .Where(u => u.Id.ToString() == userId)
+                .Select(u => new { u.Id, u.Username, u.Email })
+                .FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return NotFound(new { message = "User not found." });
+            }
+
+            return Ok(user);
+        }
         private SpotifyClient _spotify;
 
         // Endpoint: Home
@@ -131,12 +154,10 @@ namespace SpotifyTestApp.Controllers
             }
 
             // Calculate audio features, genre, and productivity score
-            var averageAudioFeatures = await CalculateAverageAudioFeatures(studyTracks);
             var genre = await DetermineMostPlayedGenre(studyTracks);
-            var productivity = GetProductivityScore();
+            
 
-            // Serialize the audio features dictionary to a JSON string
-            var audioFeaturesJson = JsonConvert.SerializeObject(averageAudioFeatures);
+            
 
             // Save session to the database
             var studySession = new StudySession
@@ -145,7 +166,6 @@ namespace SpotifyTestApp.Controllers
                 StudyDate = sessionStartTime,
                 //SongAudioFeaturesJson = audioFeaturesJson,   //Store as Json string
                 MusicHistory = studyTracks.Select(t => t.Name).ToList(),
-                Productivity = productivity,
                 Genre = genre
             };
 
